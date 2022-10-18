@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css' integrity='sha512-CpIKUSyh9QX2+zSdfGP+eWLx23C8Dj9/XmHjZY2uDtfkdLGo0uY12jgcnkX9vXOgYajEKb/jiw67EYm+kBf+6g==' crossorigin='anonymous'/>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Biglietto del treno</title>
+</head>
+<body>
+  <div class="bg-img vh-100">
+
+    <div class="container h-100 mx-auto my-auto d-flex justify-content-center align-items-center flex-column bg-light bg-opacity-25">
+      <div class="row">
+        <div class="text-center">
+          <h1>Compra il tuo biglietto</h1>
+        </div>
+      </div>
+      <div class="row row-cols-3 justify-content-around align-items-center flex-wrap">
+        
+        <div class="col">
+          <form class="bg-light p-2 border rounded-3 bg-opacity-75">
+            <div class="mb-3 ">
+              <label for="userName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="userName" aria-describedby="name" placeholder="Your Name" value="">
+            </div>
+          </form>
+        </div>
+        <div class="col">
+          <form class="bg-light p-2 border rounded-3 bg-opacity-75">
+            <div class="mb-3">
+              <label for="userAge" class="form-label">Age</label>
+              <input type="text" class="form-control" id="userAge" aria-describedby="userAge" placeholder="Your Age" value="">
+            </div>
+          </form>
+        </div>
+        <div class="col">
+          <form class="bg-light p-2 border rounded-3 bg-opacity-75">
+            <div class="mb-3">
+              <label for="kmRequired" class="form-label">How far is your journey?</label>
+              <input type="text" class="form-control" id="kmRequired" aria-describedby="kmRequired" placeholder="Kms here!" value="">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row row-cols-3 justify-content-around">
+        <div class="col">
+          <form class="bg-light p-2 border rounded-3 bg-opacity-75">
+            <div class="mb-3">
+              <label for="euroPerKm" class="form-label">Euro per Km</label>
+              <input type="text" class="form-control" id="euroPerKm" aria-describedby="name" value="0.21">
+            </div>
+          </form>
+        </div>
+        <div class="col">
+          <form class="bg-light p-2 border rounded-3 bg-opacity-75">
+            <div class="mb-3">
+              <label for="under18" class="form-label">Under 18 Discount</label>
+              <input type="text" class="form-control" id="under18" aria-describedby="under18" value="20%">
+            </div>
+          </form>
+        </div>
+        <div class="col">
+          <form class="bg-light p-2 border rounded-3 bg-opacity-75">
+            <div class="mb-3">
+              <label for="over65" class="form-label">Over 65 Discount</label>
+              <input type="text" class="form-control" id="over65" aria-describedby="over65" value="40%">
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="btn btn-primary" id="calculateForm">Click here for your ticket!</div>
+
+      <div class="row justify-content-evenly d-none checkResult">
+        <p class="col-2 bg-light bg-opacity-75 p-1 border rounded-3" id="resultName">
+
+        </p>
+        <p class="col-2 bg-light bg-opacity-75 p-1 border rounded-3" id="resultAge">
+
+        </p>
+        <p class="col-2 bg-light bg-opacity-75 p-1 border rounded-3" id="resultKmRequired">
+
+        </p>
+        <p class="col-2 bg-light bg-opacity-75 p-1 border rounded-3" id="resultPrice">
+
+        </p>
+        <p class="col-2 bg-light bg-opacity-75 p-1 border rounded-3" id="resultDiscount">
+
+        </p>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
